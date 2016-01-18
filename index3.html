@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive web design</title>
+    <!-- webapp -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- RWD -->
+    <!--<meta name="viewport" content="width=device-width">-->
+
+    <style type="text/css">
+
+        @media only screen and (min-width : 600px) {
+            .col1,
+            .col2,
+            .col4{
+            width: 50%!important;
+        }
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+        }
+        .col1,
+        .col2,
+        .col3,
+        .col4,
+        .col5{
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+        .col1{
+            background: lightgreen;
+        }
+        .col2{
+            background: darkred;
+        }
+        .col3{
+            background: royalblue;
+        }
+        .col4{
+            background: lightblue;
+        }
+        .col5{
+            background: lemonchiffon;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="col1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam eius. A aspernatur aut delectus distinctio dolor exercitationem inventore recusandae, sunt. Doloremque, excepturi voluptate. Aspernatur dicta error harum perferendis?</section>
+    <section class="col2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, recusandae veritatis! A, architecto assumenda dicta in ipsam maiores molestias nam nemo neque nesciunt optio quia ratione sint ullam unde vel!</section>
+    <section class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti distinctio eligendi, incidunt maiores, numquam obcaecati quod recusandae saepe sunt tempore temporibus voluptas! Obcaecati quidem repellat sequi veniam? Mollitia, voluptates.</section>
+    <section class="col4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi, debitis dolor doloremque ducimus ea earum, eligendi est illum libero maxime provident quibusdam quidem ratione repellat similique tenetur, voluptatem.</section>
+    <section class="col5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem commodi deserunt dolor eligendi exercitationem in laudantium nam, nihil pariatur quis similique, sint. Ex ipsa laboriosam sunt tempora ullam! Voluptates?</section>
+</div>
+</body>
+</html>
