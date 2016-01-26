@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- RWD -->
     <!--<meta name="viewport" content="width=device-width">-->
-
+    <!-- Latest compiled and minified CSS & JS -->
     <style type="text/css">
 
 
@@ -22,54 +22,48 @@
             -webkit-flex-flow: row wrap;
         }
 
-        .container-iner{
-            width: 100%;
-        }
-
-        .col1,
-        .col2,
-        .col3,
-        .col4,
-        .col5{
-            width: 100%;
-        }
-
-        .col1{
-            background: lightgreen;
-
+        .col1 {
+            background: lightcoral;
+            position: absolute;
+            height: 100vh;
+            width:250px;
+            -webkit-transition: prop 0.3s ease-out;
+            -moz-transition: prop 0.3s ease-out;
+            -ms-transition: prop 0.3s ease-out;
+            -o-transition: prop 0.3s ease-out;
+            transition: prop 0.3s ease-out;
+            z-index: 1;
         }
         .col2{
             background: darkred;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        .col1 {
+            -webkit-transform: translate(-250px, 0);
+            -moz-transform: translate(-250px, 0);
+            -ms-transform: translate(-250px, 0);
+            -o-transform: translate(-250px, 0);
+            transform: translate(-250px, 0);
+        }
 
+        .col1 .open{
+            -webkit-transform: translate(0.0);
+            -moz-transform: translate(0.0);
+            -ms-transform: translate(0.0);
+            -o-transform: translate(0.0);
+            transform: translate(0.0);
         }
-        .col3{
-            background: royalblue;
-        }
-        .col4{
-            background: lightblue;
-        }
-        .col5{
-            background: lemonchiffon;
-        }
+
 
         @media only screen and (min-width : 600px) {
-            .col1
-            {
-                width: 15%;
-                height: 100vh;
-            }
-            .container-iner{
-                width: 85%;
-            }
+
 
         }
 
         @media only screen and (min-width : 800px) {
-            .container{
-                width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+
 
         }
 
@@ -77,12 +71,33 @@
 </head>
 <body>
 <div class="container">
-    <section class="col1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam eius. A aspernatur aut delectus distinctio dolor exercitationem inventore recusandae, sunt. Doloremque, excepturi voluptate. Aspernatur dicta error harum perferendis?</section>
-    <div class="container-iner">
-        <section class="col2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, recusandae veritatis! A, architecto assumenda dicta in ipsam maiores molestias nam nemo neque nesciunt optio quia ratione sint ullam unde vel!</section>
-        <section class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti distinctio eligendi, incidunt maiores, numquam obcaecati quod recusandae saepe sunt tempore temporibus voluptas! Obcaecati quidem repellat sequi veniam? Mollitia, voluptates.</section>
-    </div>
-
+    <section class="col1">
+        <ul>
+            <li class="item">item</li>
+            <li class="item">item</li>
+            <li class="item">item</li>
+            <li class="item">item</li>
+            <li class="item">item</li>
+        </ul>
+    </section>
+    <section class="col2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, recusandae veritatis! A, architecto assumenda dicta in ipsam maiores molestias nam nemo neque nesciunt optio quia ratione sint ullam unde vel!</section>
 </div>
+
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+
+    <script>
+        (function () {
+            var  sidePanel = document.getElementById('col1');
+            var  mainPanel = document.getElementById('col2');
+            var hammerPanel = new Hammer(mainPanel);
+            
+            hammerPanel.on('swiperight' ,function(e){
+                sidePanel.classList.toggle('open')
+            })
+            hammerPanel.on('swiperight' ,function(e){
+                sidePanel.classList.toggle('open')
+            })
+        }());
+    </script>
 </body>
 </html>
