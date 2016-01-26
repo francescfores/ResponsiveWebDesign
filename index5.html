@@ -22,6 +22,10 @@
             -webkit-flex-flow: row wrap;
         }
 
+        .container-iner{
+            width: 100%;
+        }
+
         .col1,
         .col2,
         .col3,
@@ -29,6 +33,7 @@
         .col5{
             width: 100%;
         }
+
         .col1{
             background: lightgreen;
 
@@ -50,18 +55,13 @@
         @media only screen and (min-width : 600px) {
             .col1
             {
-                width: 60%;
-                order:2;
+                width: 15%;
+                height: 100vh;
             }
-            .col2{
-                width: 40%;
-                order:1;
+            .container-iner{
+                width: 85%;
             }
-            .col3,
-            .col4,
-            .col5{
-                order:3;
-            }
+
         }
 
     </style>
@@ -69,10 +69,11 @@
 <body>
 <div class="container">
     <section class="col1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam eius. A aspernatur aut delectus distinctio dolor exercitationem inventore recusandae, sunt. Doloremque, excepturi voluptate. Aspernatur dicta error harum perferendis?</section>
-    <section class="col2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, recusandae veritatis! A, architecto assumenda dicta in ipsam maiores molestias nam nemo neque nesciunt optio quia ratione sint ullam unde vel!</section>
-    <section class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti distinctio eligendi, incidunt maiores, numquam obcaecati quod recusandae saepe sunt tempore temporibus voluptas! Obcaecati quidem repellat sequi veniam? Mollitia, voluptates.</section>
-    <section class="col4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi, debitis dolor doloremque ducimus ea earum, eligendi est illum libero maxime provident quibusdam quidem ratione repellat similique tenetur, voluptatem.</section>
-    <section class="col5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem commodi deserunt dolor eligendi exercitationem in laudantium nam, nihil pariatur quis similique, sint. Ex ipsa laboriosam sunt tempora ullam! Voluptates?</section>
+    <div class="container-iner">
+        <section class="col2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, recusandae veritatis! A, architecto assumenda dicta in ipsam maiores molestias nam nemo neque nesciunt optio quia ratione sint ullam unde vel!</section>
+        <section class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti distinctio eligendi, incidunt maiores, numquam obcaecati quod recusandae saepe sunt tempore temporibus voluptas! Obcaecati quidem repellat sequi veniam? Mollitia, voluptates.</section>
+    </div>
+
 </div>
 </body>
 </html>
