@@ -10,13 +10,6 @@
 
     <style type="text/css">
 
-        @media only screen and (min-width : 600px) {
-            .col1,
-            .col2,
-            .col4{
-            width: 50%!important;
-        }
-        }
 
         body{
             margin: 0px;
@@ -28,6 +21,7 @@
             flex-flow: row wrap;
             -webkit-flex-flow: row wrap;
         }
+
         .col1,
         .col2,
         .col3,
@@ -37,9 +31,11 @@
         }
         .col1{
             background: lightgreen;
+
         }
         .col2{
             background: darkred;
+
         }
         .col3{
             background: royalblue;
@@ -49,6 +45,23 @@
         }
         .col5{
             background: lemonchiffon;
+        }
+
+        @media only screen and (min-width : 600px) {
+            .col1
+            {
+                width: 60%;
+                order:2;
+            }
+            .col2{
+                width: 40%;
+                order:1;
+            }
+            .col3,
+            .col4,
+            .col5{
+                order:3;
+            }
         }
 
     </style>
